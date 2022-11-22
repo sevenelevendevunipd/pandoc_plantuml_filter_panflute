@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pandoc-plantuml-filter-panflute"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["Augusto Zanellato <augusto.zanellato@gmail.com>"]
 license = "MIT"
@@ -9,7 +9,6 @@ packages = [{include = "pandoc_plantuml_filter_panflute"}]
 
 [tool.poetry.dependencies]
 python = "^3.7.2"
-pyyaml = "^6.0"
 loguru = "^0.6.0"
 panflute = "^2.2.3"
 
