@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "pandoc-plantuml-filter-panflute"
+version = "0.1.0"
+description = ""
+authors = ["Augusto Zanellato <augusto.zanellato@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "pandoc_plantuml_filter_panflute"}]
+
+[tool.poetry.dependencies]
+python = "^3.7.2"
+pyyaml = "^6.0"
+loguru = "^0.6.0"
+panflute = "^2.2.3"
+
+[tool.poetry.scripts]
+pandoc-plantuml = 'pandoc_plantuml_filter_panflute:main'
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.10.0"
+isort = "^5.10.1"
+pylint = "^2.15.5"
+
+[tool.black]
+line-length = 120
+target-version = ['py37']
+
+[tool.isort]
+profile = "black"
+
+[tool.pylint.main]
+py-version = [3, 7]
+disable = ["missing-module-docstring"]
+[tool.pylint.format]
+max-line-length = 120
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
